@@ -1,0 +1,16 @@
+[
+{
+  "modid": "yam.reli",
+  "name": "YAM-Religion",
+  "description": "YAM-Religion development build",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["SirNiloc"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

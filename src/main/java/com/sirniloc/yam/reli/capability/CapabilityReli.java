@@ -1,7 +1,7 @@
-package com.sirniloc.yam.econ.capability;
+package com.sirniloc.yam.reli.capability;
 
-import com.sirniloc.yam.econ.BaseReli;
-import com.sirniloc.yam.econ.capability.interfaces.IReli;
+import com.sirniloc.yam.reli.BaseReli;
+import com.sirniloc.yam.reli.capability.interfaces.IReli;
 import com.sirniloc.yam.util.SimpleCapabilityProvider;
 
 import net.minecraftforge.common.capabilities.CapabilityManager;

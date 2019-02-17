@@ -1,9 +1,9 @@
-package com.sirniloc.yam.econ.capability;
+package com.sirniloc.yam.reli.capability;
 
 import java.util.concurrent.Callable;
 
-import com.sirniloc.yam.econ.capability.interfaces.IReli;
-import com.sirniloc.yam.econ.nbt.ReliNBT;
+import com.sirniloc.yam.reli.capability.interfaces.IReli;
+import com.sirniloc.yam.reli.nbt.ReliNBT;
 
 import net.minecraft.nbt.NBTBase;
 import net.minecraft.util.EnumFacing;

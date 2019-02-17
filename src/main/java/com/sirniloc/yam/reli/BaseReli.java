@@ -1,8 +1,11 @@
-package com.sirniloc.yam.econ;
+package com.sirniloc.yam.reli;
 
-import com.sirniloc.yam.econ.capability.CapabilityReli;
-import com.sirniloc.yam.econ.capability.interfaces.IReli;
-import com.sirniloc.yam.econ.events.ReliEvents;
+import com.sirniloc.yam.reli.capability.CapabilityReli;
+import com.sirniloc.yam.reli.capability.interfaces.IReli;
+import com.sirniloc.yam.reli.events.AlignmentEvents;
+import com.sirniloc.yam.reli.events.DomainEvents;
+import com.sirniloc.yam.reli.events.GodEvents;
+import com.sirniloc.yam.reli.events.ReliEvents;
 
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
@@ -34,6 +37,9 @@ public class BaseReli
     public void init(FMLInitializationEvent event)
     {
     	MinecraftForge.EVENT_BUS.register(new ReliEvents());
+    	MinecraftForge.EVENT_BUS.register(new GodEvents());
+    	MinecraftForge.EVENT_BUS.register(new DomainEvents());
+    	MinecraftForge.EVENT_BUS.register(new AlignmentEvents());
     }
     @EventHandler
     public void postInit(FMLInitializationEvent event)    {

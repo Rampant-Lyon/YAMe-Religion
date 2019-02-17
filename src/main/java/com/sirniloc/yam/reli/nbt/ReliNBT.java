@@ -1,6 +1,6 @@
-package com.sirniloc.yam.econ.nbt;
+package com.sirniloc.yam.reli.nbt;
 
-import com.sirniloc.yam.econ.capability.interfaces.IReli;
+import com.sirniloc.yam.reli.capability.interfaces.IReli;
 
 import net.minecraft.nbt.NBTBase;
 import net.minecraft.nbt.NBTTagCompound;
@@ -12,12 +12,16 @@ public class ReliNBT {
 		if(nbt instanceof NBTTagCompound) {
 			NBTTagCompound tag = (NBTTagCompound)nbt;
 			instance.setGod(tag.getInteger("god"));
+			instance.setAlignment(tag.getDouble("morality"));
+			instance.setDivineFavor(tag.getDouble("divine_favor"));
 		}
 	}
 	
 	public static NBTBase writeNBT(Capability<IReli> capability, IReli instance, EnumFacing side) {
 		NBTTagCompound nbt = new NBTTagCompound();
 		nbt.setInteger("god", instance.getGod());
-		return nbt;		
+		nbt.setDouble("morality", instance.getAlignment());
+		nbt.setDouble("divine_favor", instance.getDivineFavor());
+		return nbt;
 	}
 }

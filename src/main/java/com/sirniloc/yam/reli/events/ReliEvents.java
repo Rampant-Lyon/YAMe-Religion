@@ -1,9 +1,9 @@
-package com.sirniloc.yam.econ.events;
+package com.sirniloc.yam.reli.events;
 
-import com.sirniloc.yam.econ.BaseReli;
-import com.sirniloc.yam.econ.capability.CapabilityReli;
-import com.sirniloc.yam.econ.capability.Reli;
-import com.sirniloc.yam.econ.capability.interfaces.IReli;
+import com.sirniloc.yam.reli.BaseReli;
+import com.sirniloc.yam.reli.capability.CapabilityReli;
+import com.sirniloc.yam.reli.capability.Reli;
+import com.sirniloc.yam.reli.capability.interfaces.IReli;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
@@ -16,8 +16,7 @@ public class ReliEvents {
 
 	@SubscribeEvent
 	public void onAttachCapabilityEntity(AttachCapabilitiesEvent<Entity> event) {
-		if(event.getObject() instanceof EntityPlayer) {
-			
+		if(event.getObject() instanceof EntityPlayer) {			
 			final IReli absCap = new Reli((EntityLivingBase) event.getObject());
 			event.addCapability(BaseReli.RELI_ID, CapabilityReli.createProvider(absCap));
 		}

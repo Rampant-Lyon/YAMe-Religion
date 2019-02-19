@@ -21,6 +21,10 @@ public class BaseReli
     public static final String MODID = "yam.reli";
     public static final String VERSION = "0.1";
     
+    public static final int EVENT_DOMAIN = 9999;
+    public static final int EVENT_ALIGNMENT = EVENT_DOMAIN*2;
+    public static final int EVENT_GOD = EVENT_ALIGNMENT*2;
+    
     
     @CapabilityInject(IReli.class)
 	public static Capability<IReli> RELI_CAP = null;	

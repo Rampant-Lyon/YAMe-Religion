@@ -1,4 +1,4 @@
-package com.sirniloc.yam.reli.gods;
+package com.sirniloc.yam.reli.pantheon;
 
 public class Domain {
 	private String name;
